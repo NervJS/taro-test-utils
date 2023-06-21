@@ -13,6 +13,8 @@
 npm i @tarojs/test-utils-react --save
 # Vue3:
 npm i @tarojs/test-utils-vue3 --save
+# Vue2:
+npm i @tarojs/test-utils-vue --save
 ```
 
 ## 使用
@@ -32,6 +34,8 @@ npm i jest --save
 const defineJestConfig = require("@tarojs/test-utils-react/dist/jest.js").default;
 // vue3
 // const defineJestConfig = require("@tarojs/test-utils-vue3/dist/jest.js").default;
+// vue2
+// const defineJestConfig = require("@tarojs/test-utils-vue/dist/jest.js").default;
 
 module.exports = defineJestConfig({
   // testEnvironment: 'jsdom',  // 测试使用的环境

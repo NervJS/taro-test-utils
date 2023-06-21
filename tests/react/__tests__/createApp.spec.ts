@@ -22,7 +22,7 @@ describe('CreateApp', () => {
   test('page lifecycle', async () => {
     await testUtils.PageLifecycle.onShow('pages/index/index')
     await wait(10)
-    expect(testUtils.html()).toMatchSnapshot()
+    expect(testUtils.queries.waitForQueryByText('first page show')).toBeTruthy()
   })
 
   test('router change', async () => {

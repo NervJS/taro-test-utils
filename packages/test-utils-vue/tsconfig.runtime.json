@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.root.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src/jest/runtime",
+    "module": "ESNext",
+    "outDir": "dist/jest/runtime",
+    "skipLibCheck": true,
+    "types": ["node"],
+    "declaration": true
+  },
+  "include": ["./src/jest/runtime", "./types"]
+}

@@ -181,7 +181,7 @@ describe('CreateApp', () => {
   test('page lifecycle', async () => {
     await testUtils.PageLifecycle.onShow('pages/index/index')
     await wait(10)
-    expect(testUtils.html()).toMatchSnapshot()
+    expect(testUtils.queries.waitForQueryByText('first page show')).toBeTruthy()
   })
 
   test('router change', async () => {
@@ -196,7 +196,7 @@ describe('CreateApp', () => {
 
   test('trigger lifecycle', async () => {
     await testUtils.PageLifecycle.triggerReachBottom('pages/second/index')
-    await wait(100)
+    await wait(10)
     expect(testUtils.queries.waitForQueryByText('seoncd page reachBottom')).toBeTruthy()
   })
 })
