@@ -5,10 +5,10 @@ import { fireEvent } from './fire-event'
 import { Current } from '@tarojs/runtime'
 import { join } from 'path'
 import { createRouter } from '@tarojs/router'
-import { createVue3App } from '@tarojs/plugin-framework-vue3/dist/runtime'
-import * as components from '@tarojs/components/lib/vue3'
-import { initVue3Components } from '@tarojs/components/lib/vue3/components-loader'
-import { h, nextTick } from 'vue'
+import { createVueApp } from '@tarojs/plugin-framework-vue2/dist/runtime'
+import * as components from '@tarojs/components/lib/vue2'
+import { initVue2Components } from '@tarojs/components/lib/vue2/components-loader'
+import Vue, { nextTick } from 'vue'
 
 import type { AppInstance, PageInstance } from '@tarojs/runtime'
 import type { FireEvent } from '@tarojs/test-utils-dom'
@@ -94,9 +94,22 @@ class VueTestUtil {
 
     config.router = { mode: 'hash' }
 
-    initVue3Components(app, components)
+    initVue2Components((() => {
+      const componentsMapping = {}
+      Object.entries(components).forEach(([name, component]) => {
+        // @ts-ignore
+        if (component && !component.render!) {
+          // 修复bug：initVue2Components会对组件判断是否有render()
+          componentsMapping[name] = Object.assign(component, {
+            render: () => { }
+          })
+        }
+        componentsMapping[name] = component
+      })
+      return componentsMapping
+    })())
 
-    const appInst = createVue3App(app, h, config)
+    const appInst = createVueApp(app, Vue, config)
     proxyAppLifeCycle(appInst)
 
     Current.page = {
