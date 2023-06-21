@@ -25,19 +25,18 @@ npm i jest --save
 
 ### 配置 Jest
 
-在 Taro 项目根目录添加文件`jest.config.mjs`。配置文件如下：
+在 Taro 项目根目录添加文件`jest.config.js`。配置文件如下：
 
 ```js
-// React
-import defineJestConfig from '@tarojs/test-utils-react/dist/jest.js'
-// Vue3
-// import defineJestConfig from '@tarojs/test-utils-vue3/dist/jest.js'
+// react
+const defineJestConfig = require("@tarojs/test-utils-react/dist/jest.js").default;
+// vue3
+// const defineJestConfig = require("@tarojs/test-utils-vue3/dist/jest.js").default;
 
-// 配置同Jest Configuring
-export default defineJestConfig({
+module.exports = defineJestConfig({
   // testEnvironment: 'jsdom',  // 测试使用的环境
   // testMatch: ['<rootDir>/__test__/**/*.test.{js,ts}'],  // 测试文件匹配
-})
+});
 ```
 
 `defineJestConfig` 已内置了部分初始化配置，需要修改可自行配置覆盖
@@ -49,30 +48,30 @@ export default defineJestConfig({
 
 ```javascript
 // __test__/main/index.test.js
-import TestUtils from '@tarojs/test-utils-react'
-import Hello from '../../src/components/Hello.tsx'
-const testUtils = new TestUtils()
-describe('App', () => {
-  it('RenderComponent', async () => {
+import TestUtils from "@tarojs/test-utils-react";
+import Hello from "../../src/components/Hello.tsx";
+const testUtils = new TestUtils();
+describe("App", () => {
+  it("RenderComponent", async () => {
     // React跟Vue相同用法
     await testUtils.mount(Hello, {
       props: {
         // 配置项
-        a: 1
-      }
-    })
+        a: 1,
+      },
+    });
     // 等待页面出现.btn这个节点
-    const btn = await testUtils.queries.waitForQuerySelector('.btn')
+    const btn = await testUtils.queries.waitForQuerySelector(".btn");
     // 等待react的渲染更新完成
     await testUtils.act(() => {
       // 触发点击事件
-      testUtils.fireEvent.click(btn)
-    })
+      testUtils.fireEvent.click(btn);
+    });
     // 打印渲染结果
-    expect(testUtils.html()).toMatchSnapshot()
+    expect(testUtils.html()).toMatchSnapshot();
     // <div class="hello">...
-  })
-})
+  });
+});
 ```
 
 #### 运行测试
@@ -89,23 +88,23 @@ npm run test
 
 ```javascript
 // __test__/main/index.test.js
-import TestUtils from '@tarojs/test-utils-react'
-import App from '../../src/app.ts'
-const testUtils = new TestUtils()
-describe('App', () => {
-  it('RenderApp', async () => {
-    await testUtils.createApp()
+import TestUtils from "@tarojs/test-utils-react";
+import App from "../../src/app.ts";
+const testUtils = new TestUtils();
+describe("App", () => {
+  it("RenderApp", async () => {
+    await testUtils.createApp();
     // 监听/pages/index/index这个页面路由的onShow生命周期触发
-    await testUtils.PageLifecycle.onShow('/pages/index/index')
+    await testUtils.PageLifecycle.onShow("/pages/index/index");
     // 跳转到第二个页面
-    Taro.navigateTo({ url: '/pages/second/index' })
+    Taro.navigateTo({ url: "/pages/second/index" });
     // 监听/pages/second/index这个页面路由的onShow生命周期触发
-    await testUtils.PageLifecycle.onShow('/pages/second/index')
+    await testUtils.PageLifecycle.onShow("/pages/second/index");
     // 当/pages/second/index触发onShow后，打印页面内容
-    expect(testUtils.html()).toMatchSnapshot()
+    expect(testUtils.html()).toMatchSnapshot();
     // <body><div class="taro_router" id="app">...
-  })
-})
+  });
+});
 ```
 
 ## API
@@ -148,9 +147,9 @@ scripts: {
 这里会将运行代码中的`process.env.TARO_ENV`切换为`TARO_ENV_JEST`的值，主要用于一些"环境判断"比如下面的代码将会在`test:weapp`执行:
 
 ```js
-if (process.env.TARO_ENV === 'weapp') {
+if (process.env.TARO_ENV === "weapp") {
   // ....setState(....)
-  console.log('this is weapp')
+  console.log("this is weapp");
 }
 ```
 

@@ -1,7 +1,6 @@
 {
   "editor.tabSize": 2,
   "search.followSymlinks": false,
-  "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
@@ -23,7 +22,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "typescript.tsserver.pluginPaths": [
-    "typescript-plugin-css-modules"
-  ]
+  "[markdown]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
