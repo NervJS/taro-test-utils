@@ -5,9 +5,9 @@ import { fireEvent } from './fire-event'
 import { Current } from '@tarojs/runtime'
 import { join } from 'path'
 import { createRouter } from '@tarojs/router'
-import { createVue3App } from '@tarojs/plugin-framework-vue3/dist/runtime'
-import * as components from '@tarojs/components/lib/vue3'
-import { initVue3Components } from '@tarojs/components/lib/vue3/components-loader'
+import { createVueApp } from '@tarojs/plugin-framework-vue2/dist/runtime'
+import * as components from '@tarojs/components/lib/vue2'
+import { initVue2Components } from '@tarojs/components/lib/vue2/components-loader'
 import { h, nextTick } from 'vue'
 
 import type { AppInstance, PageInstance } from '@tarojs/runtime'
@@ -94,9 +94,9 @@ class VueTestUtil {
 
     config.router = { mode: 'hash' }
 
-    initVue3Components(app, components)
+    initVue2Components(components)
 
-    const appInst = createVue3App(app, h, config)
+    const appInst = createVueApp(app, h, config)
     proxyAppLifeCycle(appInst)
 
     Current.page = {
