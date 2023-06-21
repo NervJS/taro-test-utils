@@ -1,6 +1,6 @@
 {
-  "name": "@tarojs/taro-testing",
-  "version": "",
+  "name": "taro-test-utils",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "private": true,
