@@ -11,7 +11,6 @@
     "build": "pnpm -r --filter=./packages/* run build",
     "version": "run-s version:*",
     "version:release": "pnpm --parallel -r --filter=./packages/* exec npm version ${npm_package_version}",
-    "publish": "pnpm publish --filter=./packages/* --registry=https://registry.npmjs.org/ --no-git-checks",
     "test": "pnpm -r --filter=./tests/* run test"
   },
   "lint-staged": {
