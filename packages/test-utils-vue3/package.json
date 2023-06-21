@@ -1,0 +1,51 @@
+{
+  "name": "@tarojs/test-utils-vue3",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "types": "dist",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@babel/runtime": "^7.21.5",
+    "@tarojs/test-utils-dom": "workspace:*",
+    "@tarojs/test-utils-shared": "workspace:*",
+    "@tarojs/taro-h5": "^3.6.0",
+    "@vue/test-utils": "^2.3.2",
+    "@vue/vue3-jest": "^29.2.4",
+    "babel-jest": "^29.5.0",
+    "pretty-format": "^29.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@jest/transform": "^29.5.0",
+    "@tarojs/components": "^3.6.0",
+    "@tarojs/helper": "^3.6.0",
+    "@tarojs/plugin-framework-vue3": "^3.6.0",
+    "@tarojs/router": "^3.6.0",
+    "@tarojs/runner-utils": "^3.6.0",
+    "@tarojs/runtime": "^3.6.0",
+    "@tarojs/shared": "^3.6.0",
+    "@tarojs/taro": "^3.6.0",
+    "@tarojs/taro-h5": "^3.6.0",
+    "@vue/runtime-core": "^3.0.0",
+    "jest": "^29.3.1",
+    "vue": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@tarojs/components": "^3.6.0",
+    "@tarojs/helper": "^3.6.0",
+    "@tarojs/plugin-framework-vue3": "^3.6.0",
+    "@tarojs/router": "^3.6.0",
+    "@tarojs/runtime": "^3.6.0",
+    "@tarojs/shared": "^3.6.0"
+  },
+  "peerDependenciesMeta": {
+    "@tarojs/router": {
+      "optional": true
+    }
+  }
+}

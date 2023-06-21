@@ -1,0 +1,54 @@
+{
+  "name": "@tarojs/test-utils-react",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:runtime\" \"npm run dev:compile\"",
+    "dev:runtime": "tsc --project ./tsconfig.runtime.json --watch",
+    "dev:compile": "tsc --project ./tsconfig.json --watch",
+    "build": "concurrently \"npm run build:runtime\" \"npm run build:compile\"",
+    "build:runtime": "tsc --project ./tsconfig.runtime.json",
+    "build:compile": "tsc --project ./tsconfig.json",
+    "test": "jest"
+  },
+  "types": "dist",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@babel/runtime": "^7.21.5",
+    "@tarojs/test-utils-dom": "workspace:*",
+    "@tarojs/test-utils-shared": "workspace:*",
+    "@tarojs/taro-h5": "^3.6.0",
+    "babel-jest": "^29.5.0",
+    "pretty-format": "^29.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@jest/transform": "^29.5.0",
+    "@tarojs/components": "^3.6.0",
+    "@tarojs/helper": "^3.6.0",
+    "@tarojs/plugin-framework-react": "^3.6.0",
+    "@tarojs/react": "^3.6.0",
+    "@tarojs/router": "^3.6.0",
+    "@tarojs/runner-utils": "^3.6.0",
+    "@tarojs/runtime": "^3.6.0",
+    "@tarojs/shared": "^3.6.0",
+    "@tarojs/taro": "^3.6.0",
+    "@tarojs/taro-h5": "^3.6.0",
+    "concurrently": "^8.0.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "@tarojs/components": "^3.6.0",
+    "@tarojs/helper": "^3.6.0",
+    "@tarojs/plugin-framework-react": "^3.6.0",
+    "@tarojs/react": "^3.6.0",
+    "@tarojs/router": "^3.6.0",
+    "@tarojs/runtime": "^3.6.0",
+    "@tarojs/shared": "^3.6.0",
+    "@tarojs/taro": "^3.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateApp page lifecycle 1`] = `
+"[36m<body[39m
+  [33mlaunch[39m=[32m"1"[39m
+  [33mshow[39m=[32m"1"[39m
+[36m>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"taro_router"[39m
+    [33mid[39m=[32m"app"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"taro_page taro_page_show taro_page_stationed"[39m
+      [33mid[39m=[32m"/pages/index/index?stamp=AA"[39m
+    [36m>[39m
+      [36m<taro-view-core[39m
+        [33mclass[39m=[32m"index"[39m
+      [36m>[39m
+        [36m<taro-text-core[39m
+          [33mclass[39m=[32m""[39m
+        [36m>[39m
+          [0mFirst Page[0m
+        [36m</taro-text-core>[39m
+        [36m<taro-text-core[39m
+          [33mclass[39m=[32m""[39m
+        [36m>[39m
+          [0mfirst page load[0m
+        [36m</taro-text-core>[39m
+        [36m<taro-text-core[39m
+          [33mclass[39m=[32m""[39m
+        [36m>[39m
+          [0mfirst page show[0m
+        [36m</taro-text-core>[39m
+        [36m<taro-text-core[39m
+          [33mclass[39m=[32m""[39m
+        [36m/>[39m
+      [36m</taro-view-core>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m"
+`;

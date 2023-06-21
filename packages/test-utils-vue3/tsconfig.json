@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.root.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "types": ["node"],
+    "declaration": true
+  },
+  "include": ["./src", "./types"],
+  "exclude": ["./src/jest/runtime"]
+}
