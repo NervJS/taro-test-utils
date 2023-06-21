@@ -11,6 +11,7 @@
     "build": "pnpm -r --filter=./packages/* run build",
     "version": "run-s version:*",
     "version:release": "pnpm --parallel -r --filter=./packages/* exec npm version ${npm_package_version}",
+    "version:git": "git add . && git commit -m \"chore(release): publish ${npm_package_version}\"",
     "test": "pnpm -r --filter=./tests/* run test"
   },
   "lint-staged": {
