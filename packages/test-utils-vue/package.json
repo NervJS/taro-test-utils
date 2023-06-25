@@ -1,11 +1,15 @@
 {
   "name": "@tarojs/test-utils-vue",
-  "version": "0.0.25-beta.7",
+  "version": "0.0.25-beta.8",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsc -w",
-    "build": "tsc"
+    "dev": "concurrently \"npm run dev:runtime\" \"npm run dev:compile\"",
+    "dev:runtime": "tsc --project ./tsconfig.runtime.json --watch",
+    "dev:compile": "tsc --project ./tsconfig.json --watch",
+    "build": "concurrently \"npm run build:runtime\" \"npm run build:compile\"",
+    "build:runtime": "tsc --project ./tsconfig.runtime.json",
+    "build:compile": "tsc --project ./tsconfig.json"
   },
   "types": "dist",
   "typings": "dist/index.d.ts",

@@ -26,7 +26,7 @@ export default {
     'jsx'
   ],
   moduleNameMapper: {
-    '@tarojs/taro$': '@tarojs/test-utils-react/dist/jest/runtime/taro-h5.js',
+    '@tarojs/taro$': resolve(__dirname, './runtime/taro-h5.js'),
     '@tarojs/components$': '@tarojs/components/lib/react/index'
   },
   globals: {
