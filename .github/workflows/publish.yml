@@ -114,7 +114,7 @@ jobs:
       - name: install
         uses: pnpm/action-setup@v2.2.4
         with:
-          version: 7
+          version: 8
           run_install: |
             - recursive: true
               args: [--frozen-lockfile]
