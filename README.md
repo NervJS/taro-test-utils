@@ -93,6 +93,7 @@ npm run test
 ```javascript
 // __test__/main/index.test.js
 import TestUtils from "@tarojs/test-utils-react";
+import Taro from '@tarojs/taro'
 import App from "../../src/app.ts";
 const testUtils = new TestUtils();
 describe("App", () => {
