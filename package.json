@@ -1,6 +1,6 @@
 {
   "name": "taro-test-utils",
-  "version": "0.0.25-beta.8",
+  "version": "0.0.24",
   "description": "",
   "main": "index.js",
   "private": true,
