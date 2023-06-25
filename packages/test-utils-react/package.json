@@ -12,6 +12,9 @@
     "build:compile": "tsc --project ./tsconfig.json",
     "test": "jest"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "types": "dist",
   "typings": "dist/index.d.ts",
   "dependencies": {
