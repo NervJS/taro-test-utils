@@ -1,6 +1,6 @@
 {
   "name": "@tarojs/test-utils-shared",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "main": "dist/index.js",
   "type": "module",
   "license": "MIT",
@@ -10,6 +10,9 @@
   },
   "types": "dist",
   "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@babel/runtime": "^7.21.5",
     "babel-jest": "^29.5.0",

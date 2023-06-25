@@ -1,6 +1,6 @@
 {
   "name": "@tarojs/test-utils-vue3",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -9,6 +9,9 @@
   },
   "types": "dist",
   "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@babel/runtime": "^7.21.5",
     "@tarojs/plugin-platform-h5": "^3.6.0",
