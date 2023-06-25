@@ -5,7 +5,6 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
     "lint": "eslint packages/**/src/ --ext .js --ext .ts --ext .tsx",
     "dev": "pnpm -r --filter=./packages/* run dev",
     "build": "pnpm -r --filter=./packages/* run build",
@@ -16,8 +15,19 @@
     "test": "pnpm -r --filter=./tests/* run test"
   },
   "lint-staged": {
-    "packages/**/src/**/*.{js,jsx,ts,tsx,json,css,scss,less}": "prettier --ignore-unknown",
-    "packages/**/src/*.{js,jsx,ts,tsx}": "eslint"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/NervJS/taro-test-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NervJS/taro-test-utils.git"
   },
   "keywords": [],
   "author": "",
