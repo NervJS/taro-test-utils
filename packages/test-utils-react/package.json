@@ -1,6 +1,6 @@
 {
   "name": "@tarojs/test-utils-react",
-  "version": "0.0.25-beta.6",
+  "version": "0.0.25-beta.7",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {

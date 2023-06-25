@@ -33,7 +33,7 @@ export default {
     "vue"
   ],
   moduleNameMapper: {
-    '@tarojs/taro$': resolve(__dirname, './runtime/taro-h5.js'),
+    '@tarojs/taro$': '@tarojs/test-utils-vue3/dist/jest/runtime/taro-h5.js',
     '@tarojs/components$': '@tarojs/components/lib/vue3/index'
   },
   globals: {
