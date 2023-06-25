@@ -9,8 +9,7 @@
     "dev:compile": "tsc --project ./tsconfig.json --watch",
     "build": "concurrently \"npm run build:runtime\" \"npm run build:compile\"",
     "build:runtime": "tsc --project ./tsconfig.runtime.json",
-    "build:compile": "tsc --project ./tsconfig.json",
-    "test": "jest"
+    "build:compile": "tsc --project ./tsconfig.json"
   },
   "publishConfig": {
     "access": "public"
@@ -38,7 +37,6 @@
     "@tarojs/shared": "^3.6.0",
     "@tarojs/taro": "^3.6.0",
     "@tarojs/taro-h5": "^3.6.0",
-    "concurrently": "^8.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
