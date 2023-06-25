@@ -1,6 +1,6 @@
 {
   "name": "@tarojs/test-utils-dom",
-  "version": "0.0.13",
+  "version": "0.0.15",
   "main": "dist/index.js",
   "type": "module",
   "license": "MIT",
