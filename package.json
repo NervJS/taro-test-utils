@@ -11,7 +11,7 @@
     "clear-all": "rimraf **/node_modules",
     "version": "run-s version:*",
     "version:release": "pnpm --parallel -r --aggregate-output --filter=./packages/* exec npm version ${npm_package_version}",
-    "version:git": "git add . && git commit -m \"chore(release): publish ${npm_package_version}\"",
+    "version:git": "git add . && git commit -m \"chore(release): publish ${npm_package_version} --tag=beta\"",
     "test": "pnpm -r --filter=./tests/* run test"
   },
   "lint-staged": {
