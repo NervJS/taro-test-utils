@@ -1,6 +1,6 @@
 {
   "name": "@tarojs/test-utils-vue3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.21.5",
-    "@tarojs/plugin-platform-h5": "^3.6.0",
     "@tarojs/test-utils-dom": "workspace:*",
     "@tarojs/test-utils-shared": "workspace:*",
     "@vue/test-utils": "^2.3.2",
@@ -44,10 +43,9 @@
   },
   "peerDependencies": {
     "@tarojs/components": "^3.6.0",
-    "@tarojs/taro-h5": "^3.6.0",
     "@tarojs/helper": "^3.6.0",
+    "@tarojs/plugin-platform-h5": "^3.6.0",
     "@tarojs/plugin-framework-vue3": "^3.6.0",
-    "@tarojs/router": "^3.6.0",
     "@tarojs/runtime": "^3.6.0",
     "@tarojs/shared": "^3.6.0"
   },

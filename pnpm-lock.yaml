@@ -85,7 +85,6 @@ importers:
       '@tarojs/components': ^3.6.0
       '@tarojs/helper': ^3.6.0
       '@tarojs/plugin-framework-react': ^3.6.0
-      '@tarojs/plugin-platform-h5': ^3.6.0
       '@tarojs/react': ^3.6.0
       '@tarojs/router': ^3.6.0
       '@tarojs/runner-utils': ^3.6.0
@@ -101,7 +100,6 @@ importers:
       react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.22.5
-      '@tarojs/plugin-platform-h5': 3.6.8_react@18.2.0
       '@tarojs/test-utils-dom': link:../test-utils-dom
       '@tarojs/test-utils-shared': link:../test-utils-shared
       babel-jest: 29.5.0_@babel+core@7.22.5
@@ -151,7 +149,6 @@ importers:
       '@tarojs/components': ^3.6.0
       '@tarojs/helper': ^3.6.0
       '@tarojs/plugin-framework-vue2': ^3.6.0
-      '@tarojs/plugin-platform-h5': ^3.6.0
       '@tarojs/router': ^3.6.0
       '@tarojs/runner-utils': ^3.6.0
       '@tarojs/runtime': ^3.6.0
@@ -170,7 +167,6 @@ importers:
       vue-template-compiler: ^2.x
     dependencies:
       '@babel/runtime': 7.22.5
-      '@tarojs/plugin-platform-h5': 3.6.8_vue@2.7.14
       '@tarojs/test-utils-dom': link:../test-utils-dom
       '@tarojs/test-utils-shared': link:../test-utils-shared
       '@vue/test-utils': 1.3.6_rhqkolmkwunxzlyyxxsuwaiuri
@@ -202,7 +198,6 @@ importers:
       '@tarojs/components': ^3.6.0
       '@tarojs/helper': ^3.6.0
       '@tarojs/plugin-framework-vue3': ^3.6.0
-      '@tarojs/plugin-platform-h5': ^3.6.0
       '@tarojs/router': ^3.6.0
       '@tarojs/runner-utils': ^3.6.0
       '@tarojs/runtime': ^3.6.0
@@ -220,7 +215,6 @@ importers:
       vue: ^3.0.0
     dependencies:
       '@babel/runtime': 7.22.5
-      '@tarojs/plugin-platform-h5': 3.6.8_vue@3.3.4
       '@tarojs/test-utils-dom': link:../test-utils-dom
       '@tarojs/test-utils-shared': link:../test-utils-shared
       '@vue/test-utils': 2.3.2_vue@3.3.4
@@ -2642,6 +2636,7 @@ packages:
       - '@types/react-native'
       - '@types/webpack'
       - '@types/webpack-dev-server'
+    dev: true
 
   /@tarojs/components-advanced/3.6.8_vue@3.3.4:
     resolution: {integrity: sha512-4qeU8Cnv2B8HuFH5wFisJHhJqlzR7KsCMPwNmI1zaJOTjdGzrZLe2ObDQSSlJv+FAjVAiqTeGz3Af1P6AnJOcA==}
@@ -2673,45 +2668,6 @@ packages:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.22.5
       '@tarojs/components': 3.6.8
       '@tarojs/taro': 3.6.8
-      classnames: 2.3.2
-      intersection-observer: 0.7.0
-      resolve-pathname: 3.0.0
-      swiper: 6.8.0
-      weui: 1.1.3
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-native'
-      - '@types/webpack'
-      - '@types/webpack-dev-server'
-      - vue
-    dev: false
-
-  /@tarojs/components-react/3.6.8_react@18.2.0:
-    resolution: {integrity: sha512-IVbT4kCvgHX4iDu8ErRq1vCSSxD0Fpd1KYfMV7UX98MuFweHdr/Ms/LC0uzKOWtdYNat59WZyOHukhl0xZ5vCQ==}
-    dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.22.5
-      '@tarojs/components': 3.6.8_react@18.2.0
-      '@tarojs/taro': 3.6.8
-      classnames: 2.3.2
-      intersection-observer: 0.7.0
-      resolve-pathname: 3.0.0
-      swiper: 6.8.0
-      weui: 1.1.3
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-native'
-      - '@types/webpack'
-      - '@types/webpack-dev-server'
-      - react
-      - vue
-    dev: false
-
-  /@tarojs/components-react/3.6.8_vue@2.7.14:
-    resolution: {integrity: sha512-IVbT4kCvgHX4iDu8ErRq1vCSSxD0Fpd1KYfMV7UX98MuFweHdr/Ms/LC0uzKOWtdYNat59WZyOHukhl0xZ5vCQ==}
-    dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.22.5
-      '@tarojs/components': 3.6.8_vue@2.7.14
-      '@tarojs/taro': 3.6.8_vue@2.7.14
       classnames: 2.3.2
       intersection-observer: 0.7.0
       resolve-pathname: 3.0.0
@@ -2831,6 +2787,7 @@ packages:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - react
+    dev: true
 
   /@tarojs/components/3.6.8_vue@3.3.4:
     resolution: {integrity: sha512-Gd1XypTvsxuXV3nJ0a1ljCayw4rPnsF0253ANPXvUj/QzDlgse3nfq1cL6HZMV/EhxpN7K/qZukTouK0ED92Ow==}
@@ -3208,51 +3165,6 @@ packages:
       - vue
     dev: false
 
-  /@tarojs/plugin-platform-h5/3.6.8_react@18.2.0:
-    resolution: {integrity: sha512-uDlsEI9OnDrme6kS8zppEDd+mu04Oc5vFwqgW2DoI5HuoHn4wKm/HD0sxc83ga0FNoPd1OO/OT/4qhdBTUhivA==}
-    dependencies:
-      '@tarojs/components': 3.6.8_react@18.2.0
-      '@tarojs/components-react': 3.6.8_react@18.2.0
-      '@tarojs/router': 3.6.8
-      '@tarojs/service': 3.6.8
-      '@tarojs/shared': 3.6.8
-      '@tarojs/taro-h5': 3.6.8_react@18.2.0
-      babel-plugin-transform-taroapi: 3.6.8
-      change-case: 4.1.2
-      lodash-es: 4.17.21
-      resolve: 1.22.2
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-native'
-      - '@types/webpack'
-      - '@types/webpack-dev-server'
-      - react
-      - supports-color
-      - vue
-    dev: false
-
-  /@tarojs/plugin-platform-h5/3.6.8_vue@2.7.14:
-    resolution: {integrity: sha512-uDlsEI9OnDrme6kS8zppEDd+mu04Oc5vFwqgW2DoI5HuoHn4wKm/HD0sxc83ga0FNoPd1OO/OT/4qhdBTUhivA==}
-    dependencies:
-      '@tarojs/components': 3.6.8_vue@2.7.14
-      '@tarojs/components-react': 3.6.8_vue@2.7.14
-      '@tarojs/router': 3.6.8_vue@2.7.14
-      '@tarojs/service': 3.6.8_vue@2.7.14
-      '@tarojs/shared': 3.6.8
-      '@tarojs/taro-h5': 3.6.8_vue@2.7.14
-      babel-plugin-transform-taroapi: 3.6.8
-      change-case: 4.1.2
-      lodash-es: 4.17.21
-      resolve: 1.22.2
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-native'
-      - '@types/webpack'
-      - '@types/webpack-dev-server'
-      - supports-color
-      - vue
-    dev: false
-
   /@tarojs/plugin-platform-h5/3.6.8_vue@3.3.4:
     resolution: {integrity: sha512-uDlsEI9OnDrme6kS8zppEDd+mu04Oc5vFwqgW2DoI5HuoHn4wKm/HD0sxc83ga0FNoPd1OO/OT/4qhdBTUhivA==}
     dependencies:
@@ -3451,6 +3363,7 @@ packages:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - vue
+    dev: true
 
   /@tarojs/router/3.6.8_vue@3.3.4:
     resolution: {integrity: sha512-ilZuLS4vBmTz9weLSgS1/HswaFFIuvwuDSDYedr8xbCiG+ZDvc+dXck8Cpxxh0flHdAKkmvX8omMnsrfCS35tQ==}
@@ -3566,6 +3479,7 @@ packages:
       - '@types/webpack-dev-server'
       - supports-color
       - vue
+    dev: true
 
   /@tarojs/service/3.6.8_vue@3.3.4:
     resolution: {integrity: sha512-CgDNk7fVs1DPMsdl+Qu4HE2PbhcMGBypaPlFtKmeGB9LWxpwqVSmSILwcfI3ow9ZvrGS0n2i+XV6zwcigDRpjg==}
@@ -3640,6 +3554,7 @@ packages:
       - '@types/webpack-dev-server'
       - react
       - vue
+    dev: true
 
   /@tarojs/taro-h5/3.6.8_vue@2.7.14:
     resolution: {integrity: sha512-A1JxCbkDrF9xNSwZfoPma++1U6q+Wp0Cf1DjCILZw+OZgQbKJrYpxOSvSDfATMuMrkZ1c3U/PVrhubr7UnuWtA==}
@@ -3663,6 +3578,7 @@ packages:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - vue
+    dev: true
 
   /@tarojs/taro-h5/3.6.8_vue@3.3.4:
     resolution: {integrity: sha512-A1JxCbkDrF9xNSwZfoPma++1U6q+Wp0Cf1DjCILZw+OZgQbKJrYpxOSvSDfATMuMrkZ1c3U/PVrhubr7UnuWtA==}
@@ -3798,6 +3714,7 @@ packages:
       '@tarojs/api': 3.6.8
       '@tarojs/runtime': 3.6.8
       vue: 2.7.14
+    dev: true
 
   /@tarojs/taro/3.6.8_vue@3.3.4:
     resolution: {integrity: sha512-pylsuFNEExcwgbSx0DYbIvWQe9448PKZmtyDH+gMnfgsV3ZO9eZIhBfXJ/4MzFeFU0lsFAbkTfVsnDuugc+gAw==}
