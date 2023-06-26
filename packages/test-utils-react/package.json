@@ -1,6 +1,6 @@
 {
   "name": "@tarojs/test-utils-react",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -18,7 +18,6 @@
   "typings": "dist/index.d.ts",
   "dependencies": {
     "@babel/runtime": "^7.21.5",
-    "@tarojs/plugin-platform-h5": "^3.6.0",
     "@tarojs/test-utils-dom": "workspace:*",
     "@tarojs/test-utils-shared": "workspace:*",
     "babel-jest": "^29.5.0",
@@ -43,6 +42,7 @@
   "peerDependencies": {
     "@tarojs/components": "^3.6.0",
     "@tarojs/helper": "^3.6.0",
+    "@tarojs/plugin-platform-h5": "^3.6.0",
     "@tarojs/plugin-framework-react": "^3.6.0",
     "@tarojs/react": "^3.6.0",
     "@tarojs/runtime": "^3.6.0",
