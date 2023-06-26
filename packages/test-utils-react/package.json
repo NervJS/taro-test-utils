@@ -1,6 +1,6 @@
 {
   "name": "@tarojs/test-utils-react",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -43,13 +43,10 @@
   "peerDependencies": {
     "@tarojs/components": "^3.6.0",
     "@tarojs/helper": "^3.6.0",
-    "@tarojs/taro-h5": "^3.6.0",
     "@tarojs/plugin-framework-react": "^3.6.0",
     "@tarojs/react": "^3.6.0",
-    "@tarojs/router": "^3.6.0",
     "@tarojs/runtime": "^3.6.0",
     "@tarojs/shared": "^3.6.0",
-    "@tarojs/taro": "^3.6.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   }
