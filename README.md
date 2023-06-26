@@ -17,6 +17,8 @@ npm i @tarojs/test-utils-vue3 --save
 npm i @tarojs/test-utils-vue --save
 ```
 
+⚠️ `@tarojs/plugin-platform-h5`为前置peerDependencies，请勿删除该依赖申明
+
 ## 使用
 
 ### 安装 Jest
